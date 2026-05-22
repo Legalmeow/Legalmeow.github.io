@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我们的团队 | 索福思律师事务所 | Sofos |& Partners</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif; line-height: 1.8; color: #333; background-color: #fff; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+      .navbar { background: #1a1a2e; color: white; padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+      .navbar-container { max-width: 1200px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; }
+      .navbar-brand { font-size: 1.4em; font-weight: 300; letter-spacing: 1px; color: white; text-decoration: none; display: flex; align-items: center; }
+      .navbar-brand img { height: 55px; margin-right: 15px; }
+      .navbar-brand-text { display: flex; flex-direction: column; }
+      .navbar-brand-text .name { font-size: 1.1em; font-weight: 600; }
+      .navbar-brand-text .tagline { font-size: 0.75em; color: #b0b0b0; }
+      .navbar-menu { display: flex; list-style: none; gap: 35px; }
+      .navbar-menu a { color: #b0b0b0; text-decoration: none; font-size: 0.95em; transition: color 0.3s; padding-bottom: 5px; border-bottom: 2px solid transparent; }
+      .navbar-menu a:hover, .navbar-menu a.active { color: #7eb8da; border-bottom-color: #7eb8da; }
+      .navbar-toggle { display: none; background: none; border: none; color: white; cursor: pointer; }
+      .navbar-menu li.has-dropdown { position: relative; }
+      .navbar-menu li .dropdown { display: none; position: absolute; top: calc(100% - 2px); left: 0; background: #16213e; padding: 12px 8px; border-radius: 6px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); min-width: 180px; z-index: 50; }
+      .navbar-menu li:hover > .dropdown { display: block; }
+      .navbar-menu li .dropdown li a { color: #dbe6f2; display: block; padding: 6px 0; }
+      .section { padding: 60px 0; }
+      .team-section { background: #f8f9fa; }
+      .section-title { font-size: 2em; font-weight: 400; color: #1a1a2e; margin-bottom: 40px; text-align: center; }
+      .section-intro { text-align: center; max-width: 900px; margin: 0 auto 50px; font-size: 1.05em; color: #555; line-height: 2; }
+      .partners-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0; }
+      .quote-box { background: white; padding: 40px; margin: 30px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #0f3460; }
+      .quote-text { font-style: italic; color: #555; line-height: 1.9; margin-bottom: 20px; }
+      .quote-author { text-align: right; color: #1a1a2e; font-weight: 600; }
+      .quote-author .title { font-weight: 400; color: #888; font-size: 0.9em; }
+      .partner-card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 3px solid #0f3460; }
+      .partner-header { display: flex; align-items: center; margin-bottom: 25px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+      .partner-avatar { width: 80px; height: 80px; background: linear-gradient(135deg, #1a1a2e, #0f3460); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8em; font-weight: 700; margin-right: 25px; }
+      .partner-info h3 { font-size: 1.5em; color: #1a1a2e; margin-bottom: 5px; }
+      .partner-info .role { color: #0f3460; font-weight: 500; }
+      .partner-bio { color: #555; line-height: 1.9; margin-bottom: 20px; }
+      .partner-expertise { background: #f0f4f8; padding: 20px; border-radius: 6px; border-left: 3px solid #0f3460; }
+      .partner-expertise h4 { color: #1a1a2e; margin-bottom: 12px; }
+      .partner-expertise ul { list-style: none; padding: 0; }
+      .partner-expertise ul li { padding: 5px 0 5px 20px; color: #555; font-size: 0.9em; position: relative; }
+      .partner-expertise ul li::before { content: "▸"; color: #0f3460; position: absolute; left: 0; }
+      .platform-text { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #0f3460; line-height: 1.9; }
+      .footer { background: #172a5a; padding: 80px 0 40px; color: white; }
+      .footer-divider { border-top: 1px solid rgba(255,255,255,0.15); }
+      .footer-legal a { color: #a4d4f7; text-decoration: none; }
+      @media (max-width: 768px) { .navbar-menu { display: none; } .navbar-toggle { display: block; } .partners-row { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="ch.html" class="navbar-brand">
+          <img src="img/logo/logo.png" alt="Sofos Logo">
+          <div class="navbar-brand-text">
+            <div class="name">索福思</div>
+            <div class="tagline">|& Partners</div>
+          </div>
+        </a>
+        <ul class="navbar-menu">
+          <li><a href="ch.html#hero">首页</a></li>
+          <li><a href="expertise.html">执业领域</a></li>
+          <li><a href="team.html">团队</a></li>
+          <li><a href="ch.html#credentials">资质</a></li>
+          <li><a href="ch.html#transactions">业绩案例</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="section team-section" id="team">
+      <div class="container">
+        <h2 class="section-title">我们的团队</h2>
+        <p class="section-intro">创始合伙人与专业团队——通过务实、具有前瞻性的专业服务，连接国际商业与中国。</p>
+
+        <div class="partners-row">
+          <div class="quote-box">
+            <p class="quote-text">
+              在索福思律师事务所，我们很荣幸能够领导一支充满活力的年轻团队，该团队将深厚的本地洞察与全球标准相结合。我们在争议解决与执行、跨境投资、投资管理、合规与调查，以及资本市场与投资经验方面的差异化优势，使我们能够提供推动真实商业成功的战略解决方案。我特别自豪的是我们在欧洲及国内商圈中的网络与影响力，我们利用这些资源为客户创造持久价值。
+            </p>
+            <div class="quote-author">
+              陈振福 博士（Dr. Michael Tan）<br />
+              <span class="title">创始合伙人</span>
+            </div>
+          </div>
+
+          <div class="quote-box">
+            <p class="quote-text">
+              凭借丰富的民事和刑事诉讼经验——我为每位客户带来强有力的落地执行和全盘思维。与陈博士及我们优秀的同事们一起，我们以朝气蓬勃的态度和细致入微的精准度驾驭复杂的监管环境，确实维护客户利益和业务增长。
+            </p>
+            <div class="quote-author">
+              高鹏程 <br />
+              <span class="title">创始合伙人</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="partners-row">
+          <div class="partner-card">
+            <div class="partner-header">
+              <div class="partner-avatar">MT</div>
+              <div class="partner-info">
+                <h3>陈振福 博士</h3>
+                <p class="role">创始合伙人</p>
+              </div>
+            </div>
+            <p class="partner-bio">
+              陈博士拥有25年以上从业经验，为诸多跨国企业在华投资方面提供包括并购重组、日常运维等全方位的法律解决方案及支持。同时，在帮助中资企业"走出去"方面也拥有丰富的经验。陈博士在新技术行业的相关领域（例如AI、数据和智慧制造）方面有着丰富的商业及实操经验，他曾任欧盟商会法律与竞争工作组主席及商务部下属的中国世界贸易组织研究会理事，并在多个国际仲裁中心担任仲裁员。借助其广泛的商业人脉，陈博士不仅为客户提供专业的法律支持，同时也为客户的业务增长提供差异化的助力。
+            </p>
+            <div class="partner-expertise">
+              <h4>专业领域</h4>
+              <ul>
+                <li>跨境投资</li>
+                <li>合规、调查与数据隐私（CIPP/E认证）</li>
+                <li>私募股权</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="partner-card">
+            <div class="partner-header">
+              <div class="partner-avatar">PG</div>
+              <div class="partner-info">
+                <h3>高鹏程</h3>
+                <p class="role">创始合伙人</p>
+              </div>
+            </div>
+            <p class="partner-bio">
+              高律师在诉讼领域拥有多年实操经验和良好口碑。执业以来，他独立承办了数百起民事、商事及刑事案件，包括诈骗、职务侵占、危险驾驶及复杂合同纠纷。作为创始合伙人，他专注于争议解决、风险防范与执行，以务实接地气的方式为客户提供高效有力的保驾护航，深得客户和团队成员的信赖。
+            </p>
+            <div class="partner-expertise">
+              <h4>专业领域</h4>
+              <ul>
+                <li>争议解决与执行</li>
+                <li>刑事辩护及经济犯罪案件</li>
+                <li>企业咨询</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="text-align: center; margin: 50px 0 30px; color: #1a1a2e; font-weight: 400;">我们的一体化团队</h3>
+        <div class="platform-text">
+          <p>
+            我们拥有一个精简、高效的专业团队，以精准接地气的解决方案，为客户保驾护航。团队成员各有所长，近期业务涵盖股权投融资、交易架构设计、员工持股计划、金融争议、区块链、合规调查等各个领域。团队整合多元背景，以务实高效的方式为客户提供专业支持。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; padding: 50px 0;">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+              <img src="img/logo/logo.png" alt="logo" style="width:56px;height:auto;border-radius:6px;" />
+              <div style="font-size:1.3em; font-weight:600;">索福思律师事务所</div>
+            </div>
+            <div style="display:flex; gap:20px; align-items:center; justify-content:center; margin-top:12px;">
+              <div style="text-align:center;">
+                <img src="img/logo/QR_code_gao.png" alt="高律师" style="width:110px;height:110px;display:block;margin:0 auto;border-radius:6px;" />
+                <div style="font-size:1.05em;color:rgba(255,255,255,0.9);margin-top:8px;">高律师</div>
+              </div>
+              <div style="text-align:center;">
+                <img src="img/logo/QR_code_chen.png" alt="陈博士" style="width:110px;height:110px;display:block;margin:0 auto;border-radius:6px;" />
+                <div style="font-size:1.05em;color:rgba(255,255,255,0.9);margin-top:8px;">陈博士</div>
+              </div>
+            </div>
+            <p style="font-size: 0.95em; color: rgba(255,255,255,0.85); line-height: 1.6; margin: 12px 0 0 0; text-align:center;">
+              您值得信赖的伙伴，为您提供独一无二的专业体验。
+            </p>
+          </div>
+
+          <div>
+            <h4 style="color: white; font-size: 1em; margin: 0 0 12px 0; font-weight: 600;">执业领域</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85em;">
+              <li style="margin-bottom: 6px;"><a href="merger.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">并购与重组</a></li>
+              <li style="margin-bottom: 6px;"><a href="trade-customs.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">贸易与海关</a></li>
+              <li style="margin-bottom: 6px;"><a href="ch.html#expertise-ip" style="color: rgba(255,255,255,0.7); text-decoration: none;">知识产权</a></li>
+              <li><a href="ch.html#expertise-compliance" style="color: rgba(255,255,255,0.7); text-decoration: none;">监管与合规</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="color: white; font-size: 1em; margin: 0 0 12px 0; font-weight: 600;">联系方式</h4>
+            <p style="font-size: 0.85em; color: rgba(255,255,255,0.7); margin: 0 0 6px 0;">
+              <img src="img/logo/2.webp" alt="电话" style="width:18px;height:18px;vertical-align:middle;margin-right:8px;" />
+              <a href="tel:+8618601636266" style="color: #a4d4f7; text-decoration: none;">（+86）186 0163 6266</a>
+            </p>
+            <p style="font-size: 0.85em; color: rgba(255,255,255,0.7); margin: 0 0 6px 0;">
+              <a href="mailto:shanghai@sofoslaw.cn" style="color: #a4d4f7; text-decoration: none;">shanghai@sofoslaw.cn</a>
+            </p>
+            <p style="font-size: 0.85em; color: rgba(255,255,255,0.7); margin: 0;">
+              <img src="img/logo/1.webp" alt="地址" style="width:18px;height:18px;vertical-align:middle;margin-right:8px;" />
+              <a href="https://ditu.amap.com/place/B0HK675IRU" target="_blank" style="color: #a4d4f7; text-decoration: none;">上海市徐汇区龙文路317号</a>
+            </p>
+          </div>
+        </div>
+
+        <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; text-align: center;">
+          <p style="color: rgba(255,255,255,0.6); font-size: 0.8em; margin: 0;">
+            © 2026 Sofos |& Partners Law Firm. 
+            <a href="#" style="color: #a4d4f7; text-decoration: none; margin: 0 8px;">隐私政策</a> | 
+            <a href="#" style="color: #a4d4f7; text-decoration: none; margin: 0 8px;">免责声明</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
